@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "Literal[value=/^#[0-9a-fA-F]{3,8}$/]",
+        "message": "Direct hex colors are forbidden. Use design tokens from theme/tokens.ts instead."
+      },
+      {
+        "selector": "Literal[value=/^rgb\\(/]",
+        "message": "Direct RGB colors are forbidden. Use design tokens from theme/tokens.ts instead."
+      },
+      {
+        "selector": "Literal[value=/^rgba\\(/]",
+        "message": "Direct RGBA colors are forbidden. Use design tokens from theme/tokens.ts instead."
+      },
+      {
+        "selector": "Literal[value=/^hsl\\(/]",
+        "message": "Direct HSL colors are forbidden. Use design tokens from theme/tokens.ts instead."
+      },
+      {
+        "selector": "JSXAttribute[name.name='style']",
+        "message": "Inline styles are forbidden. Use sx prop with theme tokens or TDC UI components."
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

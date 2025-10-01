@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-hex-length": "long",
+    "color-named": "never",
+    "declaration-property-value-disallowed-list": {
+      "/^color/": ["/^#/", "/^rgb/", "/^hsl/"],
+      "/^background/": ["/^#/", "/^rgb/", "/^hsl/"],
+      "/^border/": ["/^#/", "/^rgb/", "/^hsl/"]
+    },
+    "comment-empty-line-before": "always",
+    "comment-whitespace-inside": "always"
+  }
+}

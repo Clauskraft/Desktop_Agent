@@ -1,0 +1,42 @@
+# FastAPI + AgentScope Backend
+# Production dependencies
+
+# Web Framework
+fastapi==0.108.0
+uvicorn[standard]==0.25.0
+python-multipart==0.0.6
+
+# AgentScope
+agentscope==0.0.5
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+
+# WebSocket
+websockets==12.0
+
+# HTTP Client
+httpx==0.26.0
+aiohttp==3.9.1
+
+# Data Validation
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Monitoring & Logging
+structlog==24.1.0
+
+# Rate Limiting
+slowapi==0.1.9
+
+# CORS
+python-cors==1.0.0
+
+# Utilities
+python-dateutil==2.8.2
